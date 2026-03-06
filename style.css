@@ -1,62 +1,104 @@
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f2f7f2;
+background:linear-gradient(180deg,#eaf7f0,#f5fbff);
+color:#333;
 }
 
 header{
-background:#2e8b57;
+background:#3a8f7b;
 color:white;
-padding:20px;
 text-align:center;
+padding:25px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav{
+margin-top:10px;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
-.conteudo{
+nav a:hover{
+opacity:0.7;
+}
+
+.container{
 max-width:900px;
 margin:auto;
-padding:20px;
+padding:30px;
+}
+
+h2{
+color:#2e6f5c;
 }
 
 .imagens{
 display:flex;
-gap:10px;
+gap:20px;
 flex-wrap:wrap;
 justify-content:center;
+margin:25px 0;
 }
 
 .imagens img{
-width:280px;
-border-radius:8px;
+width:260px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:transform 0.3s;
+}
+
+.imagens img:hover{
+transform:scale(1.05);
 }
 
 ul{
-line-height:1.8;
+line-height:1.9;
 }
 
 .botao{
 display:inline-block;
 margin-top:20px;
-padding:10px 20px;
-background:#2e8b57;
+padding:12px 24px;
+background:#3a8f7b;
 color:white;
 text-decoration:none;
-border-radius:6px;
+border-radius:8px;
+transition:0.3s;
 }
 
 .botao:hover{
-background:#246b45;
+background:#2d6f60;
+transform:translateY(-2px);
 }
 
 footer{
 text-align:center;
 padding:15px;
-background:#ddd;
-margin-top:20px;
+background:#e3e3e3;
+margin-top:40px;
+}
+
+/* animação suave */
+
+.fade{
+animation:fadein 1s;
+}
+
+@keyframes fadein{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
