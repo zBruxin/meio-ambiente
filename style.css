@@ -102,3 +102,67 @@ opacity:1;
 transform:translateY(0);
 }
 }
+/* folhas caindo */
+
+.folhas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.folha{
+position:absolute;
+top:-50px;
+width:25px;
+height:25px;
+background:rgba(80,160,120,0.4);
+border-radius:50% 0 50% 50%;
+animation:cair 10s linear infinite;
+}
+
+.folha:nth-child(1){
+left:10%;
+animation-duration:9s;
+}
+
+.folha:nth-child(2){
+left:30%;
+animation-duration:12s;
+}
+
+.folha:nth-child(3){
+left:50%;
+animation-duration:10s;
+}
+
+.folha:nth-child(4){
+left:70%;
+animation-duration:11s;
+}
+
+.folha:nth-child(5){
+left:90%;
+animation-duration:8s;
+}
+
+@keyframes cair{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
